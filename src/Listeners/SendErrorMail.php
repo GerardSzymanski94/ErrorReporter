@@ -2,6 +2,11 @@
 
 namespace GerardSzymanski\ErrorReporter\Listeners;
 
+use GerardSzymanski\ErrorReporter\Mail\ErrorReport;
+use Illuminate\Log\Events\MessageLogged;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Mail;
+
 class SendErrorMail
 {
     /**
