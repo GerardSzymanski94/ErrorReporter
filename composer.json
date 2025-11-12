@@ -5,13 +5,13 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Vendor\\ErrorReporter\\": "src/"
+            "GerardSzymanski\\ErrorReporter\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Vendor\\ErrorReporter\\ErrorReporterServiceProvider"
+                "GerardSzymanski\\ErrorReporter\\ErrorReporterServiceProvider"
             ]
         }
     },

@@ -23,7 +23,7 @@ class SendErrorMail
 
         // Zbuduj dane raportu
         $exception = $event->context['exception'] ?? null;
-        $snapshot = \Vendor\ErrorReporter\Support\RequestSnapshot::make();
+        $snapshot = \GerardSzymanski\ErrorReporter\Support\RequestSnapshot::make();
 
         $payload = [
             'level' => $event->level,

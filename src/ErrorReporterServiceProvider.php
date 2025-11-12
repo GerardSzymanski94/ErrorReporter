@@ -5,7 +5,7 @@ namespace GerardSzymanski\ErrorReporter;
 use Illuminate\Log\Events\MessageLogged;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
-use Vendor\ErrorReporter\Listeners\SendErrorMail;
+use GerardSzymanski\ErrorReporter\Listeners\SendErrorMail;
 
 class ErrorReporterServiceProvider extends ServiceProvider
 {
