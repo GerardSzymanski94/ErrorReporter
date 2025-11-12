@@ -1,6 +1,6 @@
 <?php
 
-namespace Vendor\ErrorReporter;
+namespace GerardSzymanski\ErrorReporter;
 
 use Illuminate\Log\Events\MessageLogged;
 use Illuminate\Support\Facades\Event;

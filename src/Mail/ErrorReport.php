@@ -1,6 +1,6 @@
 <?php
 
-namespace Vendor\ErrorReporter\Mail;
+namespace GerardSzymanski\ErrorReporter\Mail;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;

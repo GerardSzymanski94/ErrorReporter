@@ -1,4 +1,7 @@
 <?php
+
+namespace GerardSzymanski\ErrorReporter\Listeners;
+
 class SendErrorMail
 {
     /**

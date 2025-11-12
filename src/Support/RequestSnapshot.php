@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Vendor\ErrorReporter\Support;
+namespace GerardSzymanski\ErrorReporter\Support;
 
 
 class RequestSnapshot
