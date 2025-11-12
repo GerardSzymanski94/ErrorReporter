@@ -1,5 +1,5 @@
 {
-    "name": "vendor/error-reporter",
+    "name": "gerard-szymanski/error-reporter",
     "description": "Laravel package: wysyłka logów na e‑mail (error+) z throttlingiem",
     "type": "library",
     "license": "MIT",
