@@ -1,0 +1,1 @@
+php artisan vendor:publish --provider="GerardSzymanski\ErrorReporter\ErrorReporterServiceProvider" --tag=error-reporter-config
