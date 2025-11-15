@@ -2,6 +2,7 @@
 
 return [
     'to' => env('ERROR_REPORT_TO'),
+    'bcc' => env('ERROR_REPORT_BCC'),
     'from' => env('ERROR_REPORT_FROM'),
 
 
