@@ -23,6 +23,10 @@ class SendErrorMail
         $to = config('error-reporter.to');
         $bcc = config('error-reporter.bcc');
 
+        if (is_string($bcc)) {
+            $bcc = array_map('trim', explode(',', $bcc));
+        }
+
         if (!$to) {
             return; // brak adresu — brak akcji
         }
@@ -67,9 +71,9 @@ class SendErrorMail
         }
 
         if (config('error-reporter.queue')) {
-            Mail::to($to)->cc($bcc)->queue($mailable);
+            Mail::to($to)->bcc($bcc)->queue($mailable);
         } else {
-            Mail::to($to)->cc($bcc)->send($mailable);
+            Mail::to($to)->bcc($bcc)->send($mailable);
         }
 
         if ($ttl > 0) {
