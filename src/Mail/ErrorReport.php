@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace GerardSzymanski\ErrorReporter\Mail;
 
 use Illuminate\Bus\Queueable;
@@ -12,12 +14,7 @@ class ErrorReport extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public array $payload;
-
-    public function __construct(array $payload)
-    {
-        $this->payload = $payload;
-    }
+    public function __construct(public array $payload) {}
 
     public function envelope(): Envelope
     {
@@ -36,7 +33,7 @@ class ErrorReport extends Mailable
 
     private function makeSubject(): string
     {
-        $app = $this->payload['app_name'] ?? config('app.name');
+        $app = (string) ($this->payload['app_name'] ?? config('app.name'));
         $lvl = strtoupper((string) ($this->payload['level'] ?? 'ERROR'));
         $msg = (string) ($this->payload['message'] ?? '');
         $env = (string) ($this->payload['app_env'] ?? '');

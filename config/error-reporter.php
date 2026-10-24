@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     'to' => env('ERROR_REPORT_TO'),
     'bcc' => env('ERROR_REPORT_BCC'),

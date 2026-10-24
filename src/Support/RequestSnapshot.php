@@ -1,10 +1,10 @@
 <?php
 
+declare(strict_types=1);
 
 namespace GerardSzymanski\ErrorReporter\Support;
 
-
-class RequestSnapshot
+final readonly class RequestSnapshot
 {
     public function __construct(
         public ?string $method,
@@ -12,9 +12,9 @@ class RequestSnapshot
         public array $headers,
         public array $input,
         public ?string $ip,
-        public ?int $userId,
+        public int|string|null $userId,
         public ?string $userEmail,
-        public array $server
+        public array $server,
     ) {}
 
     public static function make(): self
@@ -50,7 +50,7 @@ class RequestSnapshot
                     'cli' => app()->runningInConsole(),
                 ],
             );
-        } catch (\Throwable $e) {
+        } catch (\Throwable) {
             return new self(null, null, [], [], null, null, null, []);
         }
     }

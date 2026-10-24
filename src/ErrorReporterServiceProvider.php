@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace GerardSzymanski\ErrorReporter;
 
 use Illuminate\Log\Events\MessageLogged;
